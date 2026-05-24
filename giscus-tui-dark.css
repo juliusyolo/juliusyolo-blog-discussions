@@ -1,6 +1,6 @@
 main {
   --primary-default: 48, 198, 152;
-  --bg-default: 18, 26, 23;
+  --bg-default: 13, 19, 16;
   --color-prettylights-syntax-comment: #8b949e;
   --color-prettylights-syntax-constant: #79c0ff;
   --color-prettylights-syntax-entity: #d2a8ff;
@@ -97,18 +97,23 @@ main .gsc-loading-image {
 
 /* ===== TUI overrides (Julius Yolo terminal theme) ===== */
 main {
-  /* blend into the page; comment/reply boxes use the subtle/inset shades */
-  /* values converted from the site's oklch tokens in app/globals.css (.dark) */
-  --color-canvas-default: transparent;        /* page --background #0d1310 shows through */
-  --color-canvas-overlay: rgb(18 26 23 / 100%);   /* --card */
+  /* FLAT: every surface = the page --background (#0d1310); only the teal
+     borders separate boxes. Values from the site oklch tokens (app/globals.css .dark) */
+  --color-canvas-default: transparent;            /* page --background #0d1310 shows through */
+  --color-canvas-overlay: rgb(13 19 16 / 100%);   /* --background (popovers need solid) */
   --color-canvas-inset: rgb(13 19 16 / 100%);     /* --background */
-  --color-canvas-subtle: rgb(18 26 23 / 70%);     /* --card */
+  --color-canvas-subtle: rgb(13 19 16 / 100%);    /* --background (comment boxes) */
   --color-fg-default: rgb(205 229 216 / 100%);    /* --foreground */
   --color-fg-muted: rgb(106 144 127 / 100%);      /* --muted-foreground */
   --color-fg-subtle: rgb(106 144 127 / 80%);
-  --color-border-default: rgb(43 80 66 / 100%);   /* --border */
+  --color-border-default: rgb(43 80 66 / 100%);   /* --border (teal) */
   --color-border-muted: rgb(43 80 66 / 60%);
   --color-neutral-muted: rgb(43 80 66 / 35%);
+  /* outlined controls: page bg + teal border (instead of an invisible fill) */
+  --color-btn-bg: rgb(13 19 16 / 100%);
+  --color-btn-border: rgb(43 80 66 / 100%);
+  --color-segmented-control-bg: rgb(13 19 16 / 100%);
+  --color-segmented-control-button-bg: rgb(13 19 16 / 100%);
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", "Courier New", monospace;
   font-size: 14px;

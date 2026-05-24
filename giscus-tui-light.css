@@ -101,17 +101,23 @@ main .gsc-loading-image {
 
 /* ===== TUI overrides (Julius Yolo terminal theme) ===== */
 main {
-  /* values converted from the site's oklch tokens in app/globals.css (:root) */
-  --color-canvas-default: transparent;          /* page --background #f0f5f1 shows through */
-  --color-canvas-overlay: rgb(247 251 248 / 100%);  /* --card */
-  --color-canvas-inset: rgb(247 251 248 / 100%);    /* --card */
-  --color-canvas-subtle: rgb(227 234 229 / 70%);    /* --muted */
+  /* FLAT: every surface = the page --background (#f0f5f1); only the teal
+     borders separate boxes. Values from the site oklch tokens (app/globals.css :root) */
+  --color-canvas-default: transparent;              /* page --background #f0f5f1 shows through */
+  --color-canvas-overlay: rgb(240 245 241 / 100%);  /* --background (popovers need solid) */
+  --color-canvas-inset: rgb(240 245 241 / 100%);    /* --background */
+  --color-canvas-subtle: rgb(240 245 241 / 100%);   /* --background (comment boxes) */
   --color-fg-default: rgb(29 42 36 / 100%);         /* --foreground */
   --color-fg-muted: rgb(84 105 95 / 100%);          /* --muted-foreground */
   --color-fg-subtle: rgb(84 105 95 / 85%);
-  --color-border-default: rgb(160 192 178 / 100%);  /* --border */
+  --color-border-default: rgb(160 192 178 / 100%);  /* --border (teal) */
   --color-border-muted: rgb(160 192 178 / 60%);
   --color-neutral-muted: rgb(160 192 178 / 40%);
+  /* outlined controls: page bg + teal border (instead of an invisible fill) */
+  --color-btn-bg: rgb(240 245 241 / 100%);
+  --color-btn-border: rgb(160 192 178 / 100%);
+  --color-segmented-control-bg: rgb(240 245 241 / 100%);
+  --color-segmented-control-button-bg: rgb(240 245 241 / 100%);
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", "Courier New", monospace;
   font-size: 14px;
